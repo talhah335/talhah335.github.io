@@ -1,1 +1,69 @@
-Hello World Wide Web
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer</title>
+    <link rel="stylesheet" href="style.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+</head>
+
+<body>
+    <h1>
+        Pomodoro Timer
+    </h1>
+    <div class="main">
+        <div class="control-buttons">
+            <button id="pomodoro-button" onclick="setPomodoro()">
+                  Pomodoro
+            </button>
+            <button id="short-break-button" onclick="setShortBreak()">
+                  Short Break
+            </button>
+            <button id="long-break-button" onclick="setLongBreak()">
+                  Long Break
+            </button>
+        </div>
+
+        <!-- found online -->
+        <div class="timer-circle-container">
+            <svg class="progress-ring" width="250" height="250">
+              <circle class="progress-ring__background" stroke="#ccc" stroke-width="12" fill="transparent" r="110" cx="125" cy="125"/>
+              <circle class="progress-ring__circle" stroke="#660033" stroke-width="12" fill="transparent" r="110" cx="125" cy="125"/>
+            </svg>
+            <div class="timer-text" id="timer">BEGIN</div>
+        </div>
+
+        <div class="control-buttons">
+            <button id="start-button" onclick="togglePauseResume()">
+                  Start
+            </button>
+            <button id="restart-button" onclick="restartTimer()">
+                  Restart
+            </button>
+            <button id="choose-button" onclick="chooseTime()">
+                  Choose Time
+            </button>
+            <div class="auto-switch">
+                <span class="switch-label">Auto</span>
+                <label class="switch">
+                    <input type="checkbox" checked onchange="toggleAutoSwitch()">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+    <div class="task-container">
+        <span class="task-label">Tasks:</span>
+        <textarea placeholder="Enter your tasks here." type="text" class="task-input"></textarea>
+    </div>
+    </div>
+
+    <audio id="alarm-sound" src="alarm.mp3" preload="auto"></audio>
+    <script src="pomodoro_timer.js"></script>
+</body>
+
+</html>
