@@ -51,11 +51,11 @@
 }
 
 .github {
-  color: black;
+  color: white;
 }
 
 .linkedin {
-  color: #0077b5;
+  color: white;
 }
 
 .angellist {
@@ -71,12 +71,12 @@
   background-color: #0077b5;
 }
 
-.angellist:hover {
-  background-color: grey;
-}
-
 .github:hover {
   background-color: black;
+}
+
+.envelope:hover {
+  background-color: #f44336;
 }
 
 /* Buttons - Read Me, Contact Us */
@@ -95,16 +95,16 @@
   -webkit-border-radius: 5px;
 }
 
-/* .readme:hover{
+.readme:hover{
   color: white;
   background-color: #00796b;
-} */
+}
 
 .contactme {
   position: relative;
   padding: 11px 35px;
-  background: none;
-  color: #fff;
+  background: #fff;
+  color: #00796b;
   border: 2px solid #fff;
   font-weight: 600;
   font-size: 15px;
@@ -116,8 +116,8 @@
 }
 
 .contactme:hover{
-  color: #00796b;
-  background-color: white;
+  color: white;
+  background-color: #00796b;
 }
 /* main body */
 
@@ -488,8 +488,10 @@ a.hoverline:hover {
 
 #skills .col img.responsive-img {
   margin: 0 auto;
-  max-height: 100px;
-  padding-bottom: 10px;
+  margin-top: 15px;
+  padding-bottom: 5px;
+  height: 90px;
+  width: auto;
   text-align: center;
   vertical-align: middle;
   display: table-cell;
@@ -691,4 +693,23 @@ small {
   #intro.section {
     background-position-x: 30%;
   }
+}
+
+.card.medium .card-content {
+  height: calc(100% - 10px); /* Allow the content to expand */
+  padding: 20px; /* Add some padding for better readability */
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+}
+
+.card.medium .card-content p {
+  flex-grow: 1; /* Allow the <p> tag to take up the remaining space */
+  margin: 0; /* Remove default margins */
+  line-height: 1.6; /* Improve readability */
+  text-align: left; /* Align text to the left */
+  max-height: 100%; /* Allow it to grow within the available space */
+  overflow-y: auto; /* Enable vertical scrolling if content overflows */
+  padding-right: 10px; /* Add padding for better readability */
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  
 }
